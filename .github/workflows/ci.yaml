@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        go: ['1.15','1.16.0-beta.1']
+        go: ['1.15','1.14']
     steps: 
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v3

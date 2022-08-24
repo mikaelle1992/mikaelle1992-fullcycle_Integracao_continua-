@@ -10,11 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        go: ['1.15','1.16']
+        go: ['1.15','1.14']
     steps: 
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v3
         with:
           go-version: ${{ matrix.go }}  #'1.16.0-beta.1' # The Go version to download (if necessary) and use.
       - run: go version
+      - run: go test
       - run: go run math.go
